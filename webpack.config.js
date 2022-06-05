@@ -32,7 +32,14 @@ module.exports = {
   devServer: {
     port: 3000,
     open: true,
-    hot: true
+    hot: true,
+    https: {
+      host: "localhost",
+      port: 443,
+      https: true,
+      key: "./certs/localhost.key",
+      cert: "./certs/localhost.crt",
+    },
   },
   plugins: [new HtmlWebpackPlugin({
     template: "public/index.html",
